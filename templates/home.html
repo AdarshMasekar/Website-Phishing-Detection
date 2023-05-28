@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}" > -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/unicons.css')}}" >
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.min.css')}}" >
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.theme.default.min.css')}}" >
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+</head>
+<body class="body container">
+    <img id="background" src="{{ url_for('static', filename='svg.svg') }}">
+    <nav class="navigation">
+        <div class="logo">
+            <i class="fa fa-user"></i>
+            PhishDetect
+        </div>
+        <nav class="links">
+            <a href="{{url_for('home')}}" class="link">Home</a>
+            <a href="{{url_for('static', filename='detect.html')}}" class="link">Detect</a>
+            <a href="{{url_for('static', filename='aboutus.html')}}" class="link">About</a>
+        </nav>
+    </nav>
+
+    <div class="main">
+            <h5>Welcome to Phishing Detect !</h5>
+            <h2>Hello guys, Be <strong class="highlight">SECURED</strong> </h2>
+            <h2>The main motive of this webpage is to detect Phishing URLs </h2>
+            <button class="button"><a class="detect" href="{{url_for('static', filename='detect.html')}}">Detect</a></button>
+    </div>
+
+    <div class="footer">
+        <h5>
+            Phishing Attack
+        </h5>
+        <p>Phishing is a type of social engineering attack that is frequently used to steal user <br/> information &nbsp; such as login credentials and &nbsp;credit card numbers. It happens when <br/>an attacker acts &nbsp;as a trusted &nbsp;entity and tricks &nbsp;a victim into &nbsp;opening an websites, <br/>instant message, or text message.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body class="body">
+    <nav class="navigation">
+        <div class="logo">
+            <i class="fa fa-user"></i>
+            PhishDetect
+        </div>
+        <div class="links">
+            <a href="./home.html" class="link">Home</a>
+            <a href="./detect.html" class="link">Detect</a>
+            <a href="{{ url_for('./about.html') }}" class="link">About</a>
+            <a href="{{ url_for('formSubmit') }}"></a>
+        </div>
+        <div class="mode">
+            <i class="fa-solid fa-sun-bright"></i>Colour mode</div>
+    </nav>
+
+    <div class="main">
+        
+    </div>
+    
+</body>
+</html>

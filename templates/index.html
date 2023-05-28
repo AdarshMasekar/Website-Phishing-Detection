@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website is develop for identify the safety of url.">
+    <meta name="keywords" content="phishing url,phishing,cyber security,machine learning,classifier,python">
+    <meta name="author" content="VAIBHAV BICHAVE">
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+    <link href="static/styles.css" rel="stylesheet">
+    <title>URL detection</title>
+    <style>
+        body{
+            background-image: url("https://media.istockphoto.com/id/1185282377/vector/abstract-technology-binary-code-dark-red-background-cyber-alert.jpg?s=612x612&w=0&k=20&c=oU0sdzen3I6y4_5xeSXNhHVld6B2AiPZhDY-xHdBYiU=");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .gpb
+        {
+            
+            text-align: justify;
+            margin-left: 300px;
+            margin-right: 200px;
+            margin-bottom: 10px;
+        }
+        .spb
+        {
+            border:2px solid green;
+            margin-left: 40px;
+            margin-top: 35px;
+            margin-right: 40px;
+            background-color:black;
+            border-radius: 35px;
+           
+        }
+        .ypb
+        {
+            margin-top: 100px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    
+    <h1 class="text-center">Phishing URL Detection: A Real-Case Scenario
+        Through Login URLs</h1>
+<div class="ypb">
+   <h1 class="text-center" style="margin-bottom: 50px;" style="margin-top: 180px;">Abstract</h1>
+</div>
+   <div class="gpb">
+    <h2 id="date"></h2>
+   <!-- <p class="ppb">Due to the rapid growth of the Internet, users change their preference from traditional shopping to the electronic commerce.Instead of bank/shop robbery, nowadays, criminals try to find their victims in the cyberspace with some specific tricks.By using the anonymous structure of the Internet, attackers set out new techniques, such as phishing, to deceive victims with the use of false websites to collect their sensitive information such as account IDs, usernames, passwords, etc. Phishing is a social engineering Cyberattacks where criminals deceive users to obtain their credentials through a login form that submits the data to a Phishing server.In this paper, we compare machine learning and deep learning techniques to present a method capable of detecting phishing websites through URL analysis. In most current state-of-the-art solutions dealing with phishing detection, the legitimate class is made up of homepages without including login forms.On the contrary, we use URLs from the login page in both classes because we consider it is much more representative of a real case scenario and we demonstrate that existing techniques obtain a high false-positive rate when tested with URLs from legitimate login pages.Additionally, we use datasets from different years to show how models decrease their accuracy over time by training a base model with old datasets and testing it with recent URLs.</p> -->
+</div>
+
+    <div class="ppb">
+<div class=" container">
+    <div class="row">
+        <div class="form col-md" id="form1">
+            <h2>PHISHING URL PREDICTION</h2>
+    
+            <br>
+            <form action="/" method ="post">
+                <input type="text" class="form__input" name ='url' id="url" placeholder="Enter URL" required="" />
+                <label for="url" class="form__label">URL</label>
+                <button class="button" role="button" >Check here</button>
+            </form>
+           
+    </div>
+    
+    <div class="col-md" id="form2">
+        
+        <br>
+        <h6 class = "right "><a href= {{ url }} target="_blank">{{ url }}</a></h6>
+           
+        <br>
+        <h3 id="prediction"></h3>
+        <h2 id="country"></h2>
+        <h2 id="city"></h2>
+        <h2 id="timezone"></h2>
+        <h2 id="zipcode"></h2>
+        <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" >Still want to Continue</button>
+        <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">Continue</button>
+    </div> 
+</div>
+<br>
+<div class="spb">
+
+
+
+</div>
+
+</div>
+</div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    
+    <script>
+        
+            let x = '{{xx}}';
+            let country = '{{country}}';
+            let city =  '{{city}}';
+            let zipcode = '{{zipcode}}';
+            let timezone = '{{timezone}}';
+        
+            document.getElementById("country").innerHTML = "country :" + country;
+            document.getElementById("city").innerHTML = "city :" + city;
+            document.getElementById("zipcode").innerHTML = "zipcode :" + zipcode;
+            document.getElementById("timezone").innerHTML = "timezone :" + timezone;
+
+            // alert(y);
+            let num = x*100;
+            if (0<=x && x<0.50){
+                num = 100-num;
+            }
+            let txtx = num.toString();
+            if(x<=1 && x>=0.50){
+                var label = "Website is "+txtx +"% safe to use...";
+                document.getElementById("prediction").innerHTML = label;
+                document.getElementById("button1").style.display="block";
+            }
+            else if (0<=x && x<0.50){
+                var label = "Website is "+txtx +"% unsafe to use..."
+                document.getElementById("prediction").innerHTML = label ;
+                document.getElementById("button2").style.display="block";
+            }
+            
+    </script>
+    
+</body>
+
+</html>
+
